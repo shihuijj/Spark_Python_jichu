@@ -8,7 +8,7 @@
       "title": "pyspark入门",
      // "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio-latest",
      // "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
-   "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-base",    
+   "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-hadoop",    
       "steps": [
         {
           "title": "pyspark入门",
@@ -22,7 +22,7 @@
       "title": "Python大数据处理库PySpark实战——使用PySpark处理文本多分类问题",
       //"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio-latest",
       //"binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
-	    "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-base",    
+	    "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-hadoop",    
       "steps": [
         {
           "title": "Python大数据处理库PySpark实战——使用PySpark处理文本多分类问题",
@@ -36,7 +36,7 @@
       "title": "pyspark 决策树",
       //"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio-latest",
       //"binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
-	    "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-base",    
+	    "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-hadoop",    
       "steps": [
         {
           "title": "pyspark 决策树",
@@ -50,7 +50,7 @@
       "title": "pyspark kmeans",
      //"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio-latest",
       //"binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],
-	    "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-base",    
+	    "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-hadoop",    
       "steps": [
         {
           "title": "pyspark kmeans",
