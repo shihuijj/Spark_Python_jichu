@@ -6,8 +6,8 @@
   "scenarios": [
     {
       "title": "pyspark入门",
-     "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-hadoop-latest",
-     "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"], 
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-hadoop-latest",
+      "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"], 
       "steps": [
         {
           "title": "pyspark入门",
