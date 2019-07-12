@@ -12,7 +12,7 @@
         {
           "title": "pyspark入门",
           "text": "scenarios/pyspark入门.md",
-		  "program": "scripts/pre.sh",
+          "program": "scripts/pre.sh",
           "extraTab": "[domain]:[:5678]/desktop.html"
         }
       ]
@@ -27,7 +27,7 @@
           "text": "scenarios/Python大数据处理库PySpark实战——使用PySpark处理文本多分类问题.md",
           "program": "scripts/pre.sh",
           "extraTab": "[domain]:[:5678]/desktop.html"
-		}
+	}
       ]
     },
     {
@@ -38,20 +38,20 @@
         {
           "title": "pyspark 决策树",
           "text": "scenarios/pyspark 决策树.md",
-		  "program": "scripts/pre.sh",
+	  "program": "scripts/pre.sh",
           "extraTab": "[domain]:[:5678]/desktop.html"
         }
       ]
     },
     {
       "title": "pyspark kmeans",
-     "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-hadoop-latest",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-hadoop-latest",
       "binds": ["/kfcampus/public:/root/Desktop/myFile", "/userfile:/data:ro"],	      
       "steps": [
         {
           "title": "pyspark kmeans",
           "text": "scenarios/pyspark kmeans.md",
-		  "program": "scripts/pre.sh",
+          "program": "scripts/pre.sh",
           "extraTab": "[domain]:[:5678]/desktop.html"
         }
       ]
