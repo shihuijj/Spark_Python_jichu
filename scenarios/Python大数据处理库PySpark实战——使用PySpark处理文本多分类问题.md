@@ -60,7 +60,7 @@ https://www.kaggle.com/c/sf-crime/data。
 # cd /usr/local/spark
 # ./bin/pyspark
 ```
-####数据提取
+#### 数据提取
  - 利用Spark的csv库直接载入CSV格式的数据：
  
  ````
@@ -107,7 +107,7 @@ data.groupBy("Category") \
     .show()
 ````
 
-####流水线（Model Pipeline）
+#### 流水线（Model Pipeline）
    - 我们的流程和scikit-learn版本的很相似，包含3个步骤：
 
  1. regexTokenizer：利用正则切分单词
@@ -130,7 +130,7 @@ countVectors = CountVectorizer(inputCol="filtered", outputCol="features",
 vocabSize=10000, minDF=5)
 ````
 
-####StringIndexer
+#### StringIndexer
 
 - StringIndexer将一列字符串label编码为一列索引号（从0到label种类数-1），根据label出现的频率排序，最频繁出现的label的index为0。
 
@@ -148,7 +148,7 @@ dataset = pipelineFit.transform(data)
 dataset.show(5)
 ````
 
-####训练/测试数据集划分
+#### 训练/测试数据集划分
 
 
 ````
@@ -160,7 +160,7 @@ print("Test Dataset Count: " + str(testData.count()))
 训练数据量：5185
 
 测试数据量：2104
-####模型训练和评价
+#### 模型训练和评价
  - 1.以词频作为特征，利用逻辑回归进行分类
 
 我们的模型在测试集上预测和打分，查看10个预测概率值最高的结果：
