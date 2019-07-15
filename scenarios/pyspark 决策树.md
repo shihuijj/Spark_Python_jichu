@@ -34,7 +34,7 @@
 ````
 #hdfs dfs -put /root/Desktop/myFile/sample_libsvm_data.txt /tmp/
 ````
-####修改pyspark的python本地环境
+#### 修改pyspark的python本地环境
 ````
 #echo 'export PYSPARK_PYTHON=/data/anaconda3/bin/python' >> /usr/local/spark/conf/spark-env.sh
 #echo 'export PYSPARK_DRIVER_PYTHON_OPTS="--pylab" '>> /usr/local/spark/conf/spark-env.sh
@@ -46,7 +46,7 @@
 # bin/pyspark
 ```
 
-####创建新的RDD:
+#### 创建新的RDD:
 
 ````
 >>> 
@@ -103,7 +103,7 @@ treeModel = model.stages[2]
 print(treeModel)
 ````
 
-####执行action
+#### 执行action
 ````
 `+----------+------------+--------------------+
 |prediction|indexedLabel|            features|
