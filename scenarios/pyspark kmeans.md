@@ -46,7 +46,7 @@
 # bin/pyspark
 ```
 
-####创建新的RDD:
+#### 创建新的RDD:
 
 ````
 import matplotlib.pyplot as plt
@@ -105,7 +105,7 @@ plt.show()
 
 ````
 
-####结果如下
+#### 结果如下
 ![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/20181116192247263_20190429115734.034.jpg) 
 
 
@@ -156,7 +156,7 @@ ax.set_ylabel('cost')
 结果如下：
 ![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2018111619281716_20190429115824.024.jpg)
 
-####可以见到在k=5时，出现了拐角，我们取k=5
+#### 可以见到在k=5时，出现了拐角，我们取k=5
 ````
 # k=5 创建模型
 kmeans = KMeans(k=5, seed=1)
