@@ -50,10 +50,11 @@
 #### 执行action
 
 ````
->>> textFile.count()  # 计数，返回RDD中items的个数，这里就是README.md的总行 数#
-99
->>> textFile.first()  # RDD中的第一个item，这里就是文件README.md的第一行
-u'# Apache Spark'
+>>> textFile.count()  
+# 计数，返回RDD中items的个数，这里就是README.md的总行数
+# 结果103
+>>> textFile.first()  
+# RDD中的第一个item，这里就是文件README.md的第一行'# Apache Spark'
 
 ````
 
@@ -64,14 +65,14 @@ u'# Apache Spark'
 
 #### transform 和 action 结合
 ````
->>> textFile.filter(lambda line: "Spark" in line).count()  # 有多好行含有“Spark”这一字符串
-19
+>>> textFile.filter(lambda line: "Spark" in line).count()  
+# 有多好行含有“Spark”这一字符串 20
 ````
 #### 使用lamda 和 reduce
 
 ````
 >>> textFile.map(lambda line: len(line.split())).reduce(lambda a, b: a if (a>b) else b)
-22
+# 22
 
 ````
 #### 利用RDD的动作和转换能够完成复杂的计算（1)
@@ -102,7 +103,7 @@ u'# Apache Spark'
 
 ````
 >>> wordCounts.collect()
-[(u'when', 1), (u'R,', 1), (u'including', 3), (u'computation', 1), ...]
+# 结果[(u'when', 1), (u'R,', 1), (u'including', 3), (u'computation', 1), ...]
 
 ````
 
@@ -113,8 +114,8 @@ u'# Apache Spark'
 >>> linesWithSpark.cache()
 PythonRDD[26] at RDD at PythonRDD.scala:48
 >>> linesWithSpark.count()
-19
+20
 >>> linesWithSpark.count()
-19
+20
 
 ````
