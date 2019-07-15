@@ -106,7 +106,7 @@ plt.show()
 ````
 
 #### 结果如下
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/20181116192247263_20190429115734.034.jpg) 
+![](/images/20181116192247263_20190429115734.034.jpg) 
 
 
 看上去是5类；是不是我们接下来看。。
@@ -154,7 +154,7 @@ ax.set_ylabel('cost')
 ````
 
 结果如下：
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2018111619281716_20190429115824.024.jpg)
+![](/images/2018111619281716_20190429115824.024.jpg)
 
 #### 可以见到在k=5时，出现了拐角，我们取k=5
 ````
@@ -187,4 +187,4 @@ plt.show()　
 
 
 结果如下：
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/20181116193252223_20190429115902.002.jpg)
+![](/images/20181116193252223_20190429115902.002.jpg)
