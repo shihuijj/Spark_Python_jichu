@@ -9,7 +9,7 @@ Apache Spark受到越来越多的关注，主要是因为它处理实时数据�
 现在我们来用Spark Machine Learning Library[2]和PySpark来解决一个文本多分类问题 
 我们的任务，是将旧金山犯罪记录（San Francisco Crime Description）分类到33个类目中。数据可以从Kaggle中下载：
 
-https://www.kaggle.com/c/sf-crime/data 保存到myFile文件夹
+https://www.kaggle.com/c/sf-crime/data 
 
 给定一个犯罪描述，我们想知道它属于33类犯罪中的哪一类。分类器假设每个犯罪一定属于且仅属于33类中的一类。这是一个多分类的问题。
 
