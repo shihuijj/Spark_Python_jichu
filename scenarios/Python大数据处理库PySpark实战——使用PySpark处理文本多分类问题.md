@@ -195,10 +195,10 @@ lr = LogisticRegression(maxIter=20, regParam=0.3, elasticNetParam=0)
 lrModel = lr.fit(trainingData)
 predictions = lrModel.transform(testData)
 predictions.filter(predictions["prediction"] == 0) \
- .select("Descript","Category","probability","label","prediction") \
+    .select("Descript","Category","probability","label","prediction") \
     .orderBy("probability", ascending=False) \
     .show(n = 10, truncate = 30)
- evaluator = MulticlassClassificationEvaluator(predictionCol="prediction")
+evaluator = MulticlassClassificationEvaluator(predictionCol="prediction")
 evaluator.evaluate(predictions)
 ````
 
