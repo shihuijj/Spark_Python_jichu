@@ -228,7 +228,7 @@ evaluator.evaluate(predictions)
  - 4.随机森林
 
 ````
- from pyspark.ml.classification import RandomForestClassifier
+from pyspark.ml.classification import RandomForestClassifier
 rf = RandomForestClassifier(labelCol="label", \
                             featuresCol="features", \
                             numTrees = 100, \
