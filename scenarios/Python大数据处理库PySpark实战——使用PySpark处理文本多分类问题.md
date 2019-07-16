@@ -9,7 +9,7 @@ Apache Spark受到越来越多的关注，主要是因为它处理实时数据�
 现在我们来用Spark Machine Learning Library[2]和PySpark来解决一个文本多分类问题 
 我们的任务，是将旧金山犯罪记录（San Francisco Crime Description）分类到33个类目中。数据可以从Kaggle中下载：
 
-https://www.kaggle.com/c/sf-crime/data。
+https://www.kaggle.com/c/sf-crime/data 保存到myFile文件夹
 
 给定一个犯罪描述，我们想知道它属于33类犯罪中的哪一类。分类器假设每个犯罪一定属于且仅属于33类中的一类。这是一个多分类的问题。
 
@@ -71,8 +71,7 @@ https://www.kaggle.com/c/sf-crime/data。
                 .appName("dataFrame") \
                 .getOrCreate() 
 sqlContext = SQLContext(spark)
-data = sqlContext.read.format('com.databricks.spark.csv').options(header='true', 
-inferschema='true').load('train.csv')
+data = sqlContext.read.format('com.databricks.spark.csv').options(header='true', inferschema='true').load('train.csv')
  ````
  
  - 除去一些不要的列，并展示前五行： 
@@ -140,8 +139,7 @@ vocabSize=10000, minDF=5)
 from pyspark.ml import Pipeline
 from pyspark.ml.feature import OneHotEncoder, StringIndexer, VectorAssembler
 label_stringIdx = StringIndexer(inputCol = "Category", outputCol = "label")
-pipeline = Pipeline(stages=[regexTokenizer, stopwordsRemover, countVectors, 
-label_stringIdx])
+pipeline = Pipeline(stages=[regexTokenizer, stopwordsRemover, countVectors, label_stringIdx])
 # Fit the pipeline to training documents.
 pipelineFit = pipeline.fit(data)
 dataset = pipelineFit.transform(data)
@@ -157,9 +155,9 @@ dataset.show(5)
 print("Training Dataset Count: " + str(trainingData.count()))
 print("Test Dataset Count: " + str(testData.count()))
 ````
-训练数据量：5185
+训练数据量：613959
 
-测试数据量：2104
+测试数据量：264090
 #### 模型训练和评价
  - 1.以词频作为特征，利用逻辑回归进行分类
 
@@ -179,7 +177,7 @@ evaluator = MulticlassClassificationEvaluator(predictionCol="prediction")
 evaluator.evaluate(predictions)
 ````
 
-准确率是0.9610787444388802，非常不错！
+准确率是0.9723628823925167，非常不错！
 
  - 2.以TF-IDF作为特征，利用逻辑回归进行分类
 
@@ -204,7 +202,7 @@ predictions.filter(predictions["prediction"] == 0) \
 evaluator.evaluate(predictions)
 ````
 
-准确率是0.9616202660247297，和上面结果差不多。
+准确率是0.9722666656693439，和上面结果差不多。
   
 
  - 3.朴素贝叶斯
@@ -223,7 +221,7 @@ evaluator = MulticlassClassificationEvaluator(predictionCol="prediction")
 evaluator.evaluate(predictions)
 ````
 
-准确率：0.9625414629888848
+准确率：0.9954359270376009
 
  - 4.随机森林
 
@@ -246,7 +244,7 @@ evaluator = MulticlassClassificationEvaluator(predictionCol="prediction")
 evaluator.evaluate(predictions)
 ````
 
-准确率：0.6600326922344301
+准确率：0.7053934917833984
  - 结论：
 上面结果可以看出：随机森林是优秀的、鲁棒的通用的模型，但是对于高维稀疏数据来说，它并不是一个很好的选择。
 
