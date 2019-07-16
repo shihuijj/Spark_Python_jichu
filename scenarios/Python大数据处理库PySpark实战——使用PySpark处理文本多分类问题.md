@@ -78,15 +78,15 @@ inferschema='true').load('train.csv')
  - 除去一些不要的列，并展示前五行： 
  
  ````
-  drop_list = ['Dates', 'DayOfWeek', 'PdDistrict', 'Resolution', 'Address', 'X', 'Y']
+drop_list = ['Dates', 'DayOfWeek', 'PdDistrict', 'Resolution', 'Address', 'X', 'Y']
 data = data.select([column for column in data.columns if column not in drop_list])
 data.show(5)
-  ````
-   - 利用printSchema()方法来显示数据的结构：
+ ````
+ - 利用printSchema()方法来显示数据的结构：
    
-  ````
+ ````
   data.printSchema()
-  ````
+ ````
   
    - 包含数量最多的20类犯罪：
    
