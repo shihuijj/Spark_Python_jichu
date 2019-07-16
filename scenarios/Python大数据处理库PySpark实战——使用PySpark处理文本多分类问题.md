@@ -122,11 +122,9 @@ from pyspark.ml.classification import LogisticRegression
 regexTokenizer = RegexTokenizer(inputCol="Descript", outputCol="words", pattern="\\W")
 # stop words
 add_stopwords = ["http","https","amp","rt","t","c","the"] 
-stopwordsRemover = StopWordsRemover(inputCol="words", outputCol="filtered").
-setStopWords(add_stopwords)
+stopwordsRemover = StopWordsRemover(inputCol="words", outputCol="filtered").setStopWords(add_stopwords)
 # bag of words count
-countVectors = CountVectorizer(inputCol="filtered", outputCol="features",
-vocabSize=10000, minDF=5)
+countVectors = CountVectorizer(inputCol="filtered", outputCol="features", vocabSize=10000, minDF=5)
 ````
 
 #### StringIndexer
