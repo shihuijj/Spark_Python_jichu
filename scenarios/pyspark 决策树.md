@@ -31,6 +31,8 @@
 # jps
 ```
 #### 上传数据到hdfs
+从网上下载sample_libsvm_data.txt到myFile/sample_libsvm_data.txt
+下载地址https://github.com/xubo245/SparkLearning 该文件路径SparkLearning-master\file\data\mllib\input\mllibFromSpark
 ````
 #hdfs dfs -put /root/Desktop/myFile/sample_libsvm_data.txt /tmp/
 ````
